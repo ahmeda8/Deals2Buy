@@ -1,0 +1,56 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="Deals2Buy.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"
+    toolkit:TiltEffect.IsTiltEnabled="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="5"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <toolkit:PerformanceProgressBar Name="pp" Grid.Row="0"/>
+        <controls:Pivot Grid.Row="1" Name="pvtcontrol" Title="{StaticResource AppName}" Foreground="{StaticResource ForegroundTextColorBrush3}" >
+            <controls:Pivot.HeaderTemplate>
+                <DataTemplate>
+                    <TextBlock Text="{Binding Header}" Foreground="{StaticResource ForegroundTextColorBrush1}"/>
+                </DataTemplate>
+            </controls:Pivot.HeaderTemplate>
+            <controls:Pivot.ItemTemplate>
+                <DataTemplate>
+                    <Grid >
+                        <ListBox SelectionChanged="alldealslist_SelectionChanged_1" ItemsSource="{Binding DataCollection}">
+                            <ListBox.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid>
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition />
+                                            <RowDefinition />
+                                        </Grid.RowDefinitions>
+                                        <TextBlock Grid.Row="0" Text="{Binding Title}" Foreground="{StaticResource ForegroundTextColorBrush4}" FontSize="20" TextWrapping="Wrap" FontWeight="SemiBold"/>
+                                        <Border Grid.Row="1" BorderBrush="{StaticResource ForegroundTextColorBrush1}" BorderThickness="0,0,0,2" Width="480" Padding="0,0,0,10">
+                                            <TextBlock Text="{Binding Date}" Foreground="{StaticResource ForegroundTextColorBrush2}" FontWeight="SemiBold"/>
+                                        </Border>
+                                    </Grid>
+                                </DataTemplate>
+                            </ListBox.ItemTemplate>
+                        </ListBox>
+                    </Grid>
+                </DataTemplate>
+            </controls:Pivot.ItemTemplate>
+        </controls:Pivot>
+    </Grid>
+</phone:PhoneApplicationPage>
