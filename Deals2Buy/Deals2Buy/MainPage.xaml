@@ -56,4 +56,12 @@
             </controls:Pivot.ItemTemplate>
         </controls:Pivot>
     </Grid>
+    <phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="about" Click="ApplicationBarMenuItem_Click_1"></shell:ApplicationBarMenuItem>
+            </shell:ApplicationBar.MenuItems>
+            
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>
 </phone:PhoneApplicationPage>

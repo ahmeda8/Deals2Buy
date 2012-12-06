@@ -70,5 +70,10 @@ namespace Deals2Buy
                 NavigationService.Navigate(new Uri("/Details.xaml", UriKind.Relative));
             }
         }
+
+        private void ApplicationBarMenuItem_Click_1(object sender, EventArgs e)
+        {
+            NavigationService.Navigate(new Uri("/About.xaml", UriKind.Relative));
+        }
     }
 }
