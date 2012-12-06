@@ -22,8 +22,8 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="{StaticResource AppName}" Style="{StaticResource PhoneTextNormalStyle}" Foreground="{StaticResource ForegroundTextColorBrush3}"/>
-            <TextBlock Text="details" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="{StaticResource ForegroundTextColorBrush1}"/>
+            <TextBlock Text="{StaticResource AppName}" Style="{StaticResource PhoneTextNormalStyle}" Foreground="Gray"/>
+            <TextBlock Text="details" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}" Foreground="{StaticResource PhoneAccentBrush}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
@@ -35,7 +35,7 @@
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
                 <TextBlock Grid.Row="0" Name="title" Text="{Binding Title}" TextWrapping="Wrap" Foreground="{StaticResource ForegroundTextColorBrush4}" Padding="0,0,0,5" FontWeight="SemiBold"/>
-                <Border Grid.Row="1" BorderBrush="{StaticResource ForegroundTextColorBrush1}" BorderThickness="0,0,0,2" Width="480" Padding="0,0,0,5">
+                <Border Grid.Row="1" BorderBrush="Gray" BorderThickness="0,0,0,2" Width="480" Padding="0,0,0,5">
                     <TextBlock Text="{Binding Date}" Foreground="{StaticResource ForegroundTextColorBrush2}" TextTrimming="WordEllipsis" FontWeight="SemiBold"/>
                 </Border>
 

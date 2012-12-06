@@ -23,10 +23,13 @@
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <toolkit:PerformanceProgressBar Name="pp" Grid.Row="0"/>
-        <controls:Pivot Grid.Row="1" Name="pvtcontrol" Title="{StaticResource AppName}" Foreground="{StaticResource ForegroundTextColorBrush3}" >
+        <controls:Pivot Grid.Row="1" Name="pvtcontrol">
+            <controls:Pivot.Title>
+                <TextBlock Style="{StaticResource PhoneTextNormalStyle}" Text="{StaticResource AppName}" Foreground="Gray"></TextBlock>
+            </controls:Pivot.Title>
             <controls:Pivot.HeaderTemplate>
                 <DataTemplate>
-                    <TextBlock Text="{Binding Header}" Foreground="{StaticResource ForegroundTextColorBrush1}"/>
+                    <TextBlock Text="{Binding Header}" Foreground="{StaticResource PhoneAccentBrush}"/>
                 </DataTemplate>
             </controls:Pivot.HeaderTemplate>
             <controls:Pivot.ItemTemplate>
@@ -35,16 +38,16 @@
                         <ListBox SelectionChanged="alldealslist_SelectionChanged_1" ItemsSource="{Binding DataCollection}">
                             <ListBox.ItemTemplate>
                                 <DataTemplate>
+                                    <Border BorderBrush="Gray" BorderThickness="0,0,0,3" Width="480" Padding="0,0,0,5">
                                     <Grid>
                                         <Grid.RowDefinitions>
                                             <RowDefinition />
                                             <RowDefinition />
                                         </Grid.RowDefinitions>
                                         <TextBlock Grid.Row="0" Text="{Binding Title}" Foreground="{StaticResource ForegroundTextColorBrush4}" FontSize="20" TextWrapping="Wrap" FontWeight="SemiBold"/>
-                                        <Border Grid.Row="1" BorderBrush="{StaticResource ForegroundTextColorBrush1}" BorderThickness="0,0,0,2" Width="480" Padding="0,0,0,10">
-                                            <TextBlock Text="{Binding Date}" Foreground="{StaticResource ForegroundTextColorBrush2}" FontWeight="SemiBold"/>
-                                        </Border>
+                                        <TextBlock Grid.Row="1" Text="{Binding Date}" Foreground="{StaticResource ForegroundTextColorBrush2}" FontWeight="SemiBold"/>
                                     </Grid>
+                                    </Border>
                                 </DataTemplate>
                             </ListBox.ItemTemplate>
                         </ListBox>
