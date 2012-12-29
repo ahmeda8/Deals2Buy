@@ -9,12 +9,12 @@
 
     <!--Application Resources-->
     <Application.Resources>
-        <core:String x:Key="AppName">Deals2Buy</core:String>
+        <core:String x:Key="AppName">Deals2Buy reader</core:String>
         <media:Color x:Key="BackgroundColor1">#172E52</media:Color>
         <media:Color x:Key="TextColor1" >#FF4C00</media:Color>
-        <media:Color x:Key="TextColor2" >#034569</media:Color>
+        <media:Color x:Key="TextColor2" >Gray</media:Color>
         <media:Color x:Key="TextColor3" >#48DD00</media:Color>
-        <media:Color x:Key="TextColor4" >#3C9DD0</media:Color>
+        <media:Color x:Key="TextColor4" >#D6422C</media:Color>
 
         <media:SolidColorBrush x:Name="BackgroundColorBrush1" Color="{StaticResource BackgroundColor1}"></media:SolidColorBrush>
         <media:SolidColorBrush x:Name="ForegroundTextColorBrush1" Color="{StaticResource TextColor1}"></media:SolidColorBrush>
